@@ -1,0 +1,139 @@
+.home {
+    background-color: $headline_c;
+
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100vw;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+    &__container {
+        position: relative;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+
+    &__controls {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 8%;
+        left: 100%;
+    }
+
+    &__preview {
+        width: 171px;
+        height: 105px;
+        margin-bottom: 20px;
+
+        &-list,
+        &-item {
+            width: inherit;
+            height: inherit;
+        }
+
+        &-item {
+            background-color: #000;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__func {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__arrow {
+        @include transition-all();
+
+        width: 56px;
+        height: 56px;
+        background-color: $dark_c;
+        background-repeat: no-repeat;
+        background-size: auto 40%;
+        background-position: center center;
+        border-radius: 3px;
+
+        &._prev {
+            background-image: url("#{$svg}/prev.svg");
+        }
+
+        &._next {
+            background-image: url("#{$svg}/next.svg");
+        }
+
+        &:hover {
+            background-color: $main_c;
+
+            &._prev {
+                background-image: url("#{$svg}/prev_h.svg");
+            }
+
+            &._next {
+                background-image: url("#{$svg}/next_h.svg");
+            }
+        }
+    }
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 10% 0;
+    box-sizing: border-box;
+
+    &__slogan {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    &__subtitle,
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+    }
+
+    &__title {
+        font-size: 79px;
+    }
+
+    &__thirdtitle {
+        font-size: 34px;
+        font-weight: 200;
+        color: $content_c;
+    }
+
+    &__action {
+        @include row-flex();
+        justify-content: center;
+        z-index: 1;
+
+        &-btn {
+            flex: 0 0 15%;
+            margin: 0 15px;
+        }
+    }
+}

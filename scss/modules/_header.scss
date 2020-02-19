@@ -1,0 +1,148 @@
+.header {
+    background-color: $header_c;
+    width: 100%;
+
+    .row {
+        @include row-flex();
+
+        min-height: 120px;
+        position: relative;
+    }
+}
+
+.logo {
+    @include col();
+    @include size(3);
+    @include shift-right(2);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    img {
+        display: block;
+    }
+}
+
+.menu {
+    @include col();
+    @include size(6);
+
+    &__list {
+        @include row-flex();
+        height: 100%;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    &__item {
+        @include slide-hover($main_c);
+
+        display: flex;
+        align-items: stretch;
+        margin: 0 4px;
+
+        &:hover .menu__link {
+            color: $main_c;
+        }
+    }
+
+    &__link {
+        @include transition-all();
+
+        display: inline-flex;
+        align-items: center;
+        color: $menu_link_c;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+}
+
+.find {
+    @include col();
+    @include size(1);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__img {
+        display: block;
+
+        &_hover {
+            display: none;
+        }
+    }
+
+    &__btn:hover &__img {
+        display: none;
+    }
+
+    &__btn:hover &__img_hover {
+        display: block;
+    }
+
+}
+
+.search {
+    @include transition-all();
+
+    height: 0;
+    position: absolute;
+    top: 100%;
+    right: rem(30);
+    overflow: hidden;
+    z-index: 1;
+
+    &[data-active] {
+        height: 54px;
+    }
+
+    &__form {
+        background-color: #fff;
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 5px 5px 15px;
+    }
+
+    &__field {
+        flex: 0 0 80%;
+        margin-right: 15px;
+        border: none;
+        color: $text_c;
+        font-size: 13px;
+        line-height: 1.5;
+
+        @include customize-placeholder() {
+            color: $placeholder_c;
+            font-weight: bold;
+        }
+    }
+
+    &__submit {
+        @include transition-all();
+
+        background-color: $main_c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+
+        img {
+            display: block;
+            width: 50%;
+            height: auto;
+            filter: brightness(2);
+        }
+
+        &:hover {
+            background-color: $header_c;
+        }
+    }
+}

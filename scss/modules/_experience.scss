@@ -1,0 +1,153 @@
+.experience {
+    min-height: 740px;
+
+    &__tab {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 -15px 25px;
+    }
+
+    &__body {
+        padding: 10px 0
+    }
+
+    &__btn {
+        @include transition-all();
+
+        margin: 0 15px;
+        padding: 5px 0;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &._tab-btn-active {
+            @include  btn-single-border($main_c, true);
+
+            color: $main_c;
+        }
+
+        &:not(._tab-btn-active) {
+            // hover effect
+
+            @include slide-hover($main_c, $pos: true);
+        }
+    }
+
+    &__text {
+        color: $content_c;
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .history {
+        &__text {
+            margin-bottom: 25px;
+        }
+
+        &__check-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -10px 0;
+            padding: 10px 0;
+        }
+
+        &__check-item {
+            background-image: url(#{$icons}/check.png);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            flex: 0 0 50%;
+            margin: 8px 0;
+            padding: 0 15px 0 40px;
+            color: $content_c;
+            font-size: 14px;
+            line-height: 26px;
+            box-sizing: border-box;
+        }
+    }
+
+    .biography {
+        margin-bottom: -20px;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        margin: -10px 0;
+
+        &__item {
+            $item: ".skills__item";
+
+            margin: 10px 0;
+            padding: 13px 15px;
+            position: relative;
+            border-radius: 3px;
+            overflow: hidden;
+            box-sizing: border-box;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border: 1px solid $menu_link_c;
+                border-radius: 3px;
+                z-index: -2;
+            }
+
+            &-proggress {
+                width: 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+
+            &:nth-child(5n+1) #{$item}-proggress {
+                background-color: #9c5da5;
+                width: 72%;
+            }
+
+            &:nth-child(5n+2) #{$item}-proggress {
+                background-color: #11b0de;
+                width: 79%;
+            }
+
+            &:nth-child(5n+3) #{$item}-proggress {
+                background-color: #d67f7f;
+                width: 63%;
+            }
+
+            &:nth-child(5n+4) #{$item}-proggress {
+                background-color: #20bc9d;
+                width: 88%;
+            }
+
+            &:nth-child(5n) #{$item}-proggress {
+                background-color: #bb8a36;
+                width: 83%;
+            }
+        }
+
+        &__text {
+            color: #fff;
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}

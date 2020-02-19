@@ -1,0 +1,42 @@
+.features {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: -25px;
+    }
+
+    &__item {
+        flex: 0 0 28%;
+        padding: 25px;
+    }
+
+    &__title {
+        @include transition-all();
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        color: $text_c;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: bold;
+        cursor: pointer;
+
+        img {
+            display: block;
+            margin-right: 25px;
+        }
+
+        &:hover {
+            color: $main_c;
+        }
+    }
+
+    &__desc {
+        color: $text_c;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}

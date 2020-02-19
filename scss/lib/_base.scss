@@ -1,0 +1,41 @@
+/* ===== IMPORTs ===== */
+// font-family: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
+
+
+// font-family: "Maven Pro", sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap");
+
+
+/* ===== BASE ===== */
+* {
+    outline: none !important;
+}
+
+html {
+    background-color: $headline_c;
+    @include reset();
+    font-family: $f_montserrat;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.container {
+    @include container();
+    @include sm(max-width, rem($w_sm));
+    @include md(max-width, rem($w_md));
+    @include lg(max-width, rem($w_lg));
+    @include xl(max-width, rem($w_xl));
+    max-width: rem($w_xl);
+    width: 100%;
+}
+
