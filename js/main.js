@@ -81,4 +81,66 @@ jQuery(document).ready(($) => {
 
         $(this).addClass("_filter-active");
     });
+
+
+    /* Do animation on scroll and check if the animation carrently in to viewport of browser */
+    /// function body
+    var $el = $('.jsAniateOnScorll');
+    var scorlledScope = {};
+    var handler = onVisibilityChange($el, function() {
+
+        if (!scorlledScope.success) {
+
+            /// Count Animation
+            $('.jsCount').each(function () {
+
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+
+            scorlledScope.success = true;
+        }
+    });
+
+
+    /// jQuery add eventListener onScroll
+    $(window).on('DOMContentLoaded load resize scroll', handler);
+
+    /// check Element condition comparatvly previous condition
+    function onVisibilityChange(el, callback) {
+        return function () {
+            if (isElementInViewport(el)) {
+                if (typeof callback == 'function') {
+                    callback();
+                }
+            }
+        }
+    }
+
+    /// check is target element in viewport of browser
+    function isElementInViewport (el) {
+        var viewPort = document.documentElement;
+
+        if (typeof jQuery === "function" && el instanceof jQuery) {
+            // if element is using jQuery
+            el = el[0];
+        }
+
+        return el.offsetTop - viewPort.clientHeight <= viewPort.scrollTop;
+    }
+
+
+
+    /// Animate goTop button
+    // var body = $("html, body");
+    // body.stop().animate({scrollTop:0}, 500, 'swing', function() {
+    //     alert("Finished animating");
+    // });
 });
