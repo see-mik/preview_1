@@ -61,6 +61,7 @@
     align-items: stretch;
 
     &__item {
+        min-height: 280px;
         background-color: $dark-blue_c;
         border-top: 7px solid $main_c;
         color: $main_c;
