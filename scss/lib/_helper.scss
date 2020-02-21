@@ -14,7 +14,7 @@
     position: relative;
 
     &::before {
-        // @include transition-all(.05s);
+        @include transition-all;
 
         content: "";
         background-color: #fff;
@@ -39,6 +39,10 @@
 
     &._blue {
         background-color: $blue_c;
+    }
+
+    &._dark {
+        background-color: #2e4a5b;
     }
 
     &._noradius {
