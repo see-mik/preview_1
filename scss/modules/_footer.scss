@@ -1,0 +1,15 @@
+.footer {
+    background-color: $footer_c;
+    padding: 40px 0;
+
+    &__copy {
+        color: #aeaeae;
+        font-size: 14px;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    &__text-green {
+        color: $main_c;
+    }
+}

@@ -1,12 +1,13 @@
-function toggleSearchForm(e) {
-    // form use onclick handler in HTML
 
+///* form use onclick handler in HTML */
+function toggleSearchForm(e) {
     let formEl = document.getElementById("jsSearchForm");
     formEl.toggleAttribute("data-active");
 }
 
 jQuery(document).ready(($) => {
 
+    ///* custom Tabs functionality */
     function contentTabs() {
         /* Function add tab functionality to HTML
         * add class "jsTab" to element which you want to see as a tab block
@@ -47,7 +48,7 @@ jQuery(document).ready(($) => {
     contentTabs();
 
 
-    // init First sreen slider
+    ///* init First sreen slider */
     $('.jsFullScreenSlider').slick({
         dots: false,
         infinite: true,
@@ -56,17 +57,8 @@ jQuery(document).ready(($) => {
         adaptiveHeight: true
     });
 
-    // init Preview Full screen slider
-    $('.jsPreviewSlider').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true
-    });
 
-
-    // Portfolio filtering
+    ///* Portfolio filtering */
     const PORTFOLIO = new Filterizr(".jsPortfolio", {
         filter: 'all',
         gridItemsSelector: '.jsPortfolioItem',
@@ -137,8 +129,7 @@ jQuery(document).ready(($) => {
     }
 
 
-
-    /// Animate goTop button
+    ///* Animate goTop button */
     // var body = $("html, body");
     // body.stop().animate({scrollTop:0}, 500, 'swing', function() {
     //     alert("Finished animating");
