@@ -17,14 +17,14 @@ jQuery(document).ready(($) => {
         */
 
         const btnActive = "_tab-btn-active",
-              contentActive = "_tab-content-active";
+            contentActive = "_tab-content-active";
 
         let tabs = $(".jsTab");
         let btns = tabs.find("button[data-tab-btn]");
         let contents = tabs.find("*[data-tab-content]");
 
         btns.click(function () {
-            if( $(this).hasClass(btnActive) ) {
+            if ($(this).hasClass(btnActive)) {
                 return;
             }
 
@@ -36,7 +36,7 @@ jQuery(document).ready(($) => {
             contents.each((i, item) => {
                 let it = $(item);
                 it.removeClass(contentActive);
-                it.addClass( it.attr('data-tab-content') === dataCurrent ? contentActive : "");
+                it.addClass(it.attr('data-tab-content') === dataCurrent ? contentActive : "");
             });
         });
 
@@ -54,7 +54,9 @@ jQuery(document).ready(($) => {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        autoplaySpeed: 3000,
+        autoplay: true
     });
 
 
@@ -79,14 +81,14 @@ jQuery(document).ready(($) => {
     /// function body
     var $el = $('.jsAniateOnScorll');
     var scorlledScope = {};
-    var handler = onVisibilityChange($el, function() {
+    var handler = onVisibilityChange($el, function () {
 
         if (!scorlledScope.success) {
 
             /// Count Animation
             $('.jsCount').each(function () {
 
-                $(this).prop('Counter',0).animate({
+                $(this).prop('Counter', 0).animate({
                     Counter: $(this).text()
                 }, {
                     duration: 3000,
@@ -117,7 +119,7 @@ jQuery(document).ready(($) => {
     }
 
     /// check is target element in viewport of browser
-    function isElementInViewport (el) {
+    function isElementInViewport(el) {
         var viewPort = document.documentElement;
 
         if (typeof jQuery === "function" && el instanceof jQuery) {
@@ -129,9 +131,26 @@ jQuery(document).ready(($) => {
     }
 
 
-    ///* Animate goTop button */
-    // var body = $("html, body");
-    // body.stop().animate({scrollTop:0}, 500, 'swing', function() {
-    //     alert("Finished animating");
-    // });
+    ///* Animate scrollTo button */
+    $(".jsScrollTo").click(function (e) {
+        /* func works using basic HTML anchor trick, with tag "a" */
+        e.preventDefault();
+
+        const body = $("html, body");
+        const target = $(this).attr("href");
+        body.stop().animate({
+            scrollTop: $(target)[0].offsetTop
+        }, 400, 'swing');
+    });
+
+
+    ///* func makes background for the element by grabbing an image from tag img */
+    /// by Yevhen Andrikanych
+    function ibg() {
+        $.each($('.ibg'), function (index, val) {
+            if ($(this).find('img').length > 0) {
+                $(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
+            }
+        });
+    } ibg();
 });

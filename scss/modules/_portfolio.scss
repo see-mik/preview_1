@@ -119,6 +119,7 @@
 .item {
     $it: ".item";
 
+    display: flex;
     transition-delay: 0.3s !important;
     position: relative;
     overflow: hidden;
@@ -141,6 +142,7 @@
         top: -1px;right: -1px;bottom: 0;left: -1px;
         opacity: 0;
         border-top: 2px solid $main_c;
+        z-index: 1;
     }
 
     &__icon {
@@ -183,5 +185,9 @@
         font-size: 12px;
         line-height: 1.5;
         text-transform: capitalize;
+    }
+
+    &__content {
+        flex: 1 0 100%;
     }
 }
