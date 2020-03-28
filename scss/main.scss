@@ -2,8 +2,7 @@
 /* ===== LIBs ===== */
 @import "lib/smart-grid";
 @import "lib/normalize";
-@import "lib/slick";
-
+@import "lib/owl.carousel.min.css";
 
 /* ===== CUSTOM OPTION ===== */
 @import "lib/options";
@@ -17,7 +16,12 @@
 @import "modules/features";
 @import "modules/experience";
 @import "modules/portfolio";
+@import "modules/service";
+@import "modules/purchase";
+@import "modules/news";
 @import "modules/success";
 @import "modules/pricing";
+@import "modules/comments";
+@import "modules/team";
 @import "modules/contact";
 @import "modules/footer";

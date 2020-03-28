@@ -1,7 +1,6 @@
 .portfolio {
     background-color: #f8fcfe;
 
-
     .filter {
         $me: ".filter";
 
@@ -116,7 +115,7 @@
     }
 }
 
-.item {
+.portfolio .item {
     $it: ".item";
 
     display: flex;
@@ -146,9 +145,6 @@
     }
 
     &__icon {
-        background-repeat: no-repeat;
-        background-position: center center;
-
         width: 38px;
         height: 38px;
         margin: 0 0 30px 10px;
@@ -162,12 +158,11 @@
         }
 
         &_share {
-            background-image: url("#{$icons}/share.png");
+            background: url("#{$icons}/share.png") no-repeat center;
         }
 
         &_zoom {
-            background-color: $main_c;
-            background-image: url("#{$icons}/zoom.png");
+            background: $main_c url("#{$icons}/zoom.png") no-repeat center;
         }
     }
 

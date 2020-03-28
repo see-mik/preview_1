@@ -1,0 +1,181 @@
+.comments {
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    width: 100%;
+    margin-bottom: 50px;
+
+    .owl-stage-outer {
+      overflow: hidden;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+
+    &__text {
+      margin-bottom: 35px;
+      color: #bbb;
+      font-size: 16px;
+      font-weight: 300;
+      padding-top: 100px;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 44px;
+        height: 30px;
+        position: absolute;
+        margin: -80px 0 0 -22px;
+        left: 50%;
+        background: url('#{$svg}/quotes.svg') no-repeat center;
+      }
+    }
+
+    &__name {
+      margin-bottom: 10px;
+      color: $main_c;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__position {
+      margin-bottom: 30px;
+      color: #bbb;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    &__avatar {
+      background-color: #ccc;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      position: relative;
+      border: 4px solid $main_c;
+      z-index: 1;
+
+      &::before {
+        background-color: $main_c;
+        content: '';
+        border-radius: 50%;
+        opacity: .2;
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        bottom: -14px;
+        left: -14px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bbb;
+    background: no-repeat center;
+    background-size: auto 50%;
+
+    &:hover {
+      background-color: $main_c;
+      border-color: $main_c;
+    }
+
+    &._jsPrevComment {
+      margin-right: 30px;
+      background-image: url("#{$svg}/prev.svg");
+
+      &:hover {
+        background-image: url("#{$svg}/prev_h.svg");
+      }
+    }
+
+    &._jsNextComment {
+      margin-left: 30px;
+      background-image: url("#{$svg}/next.svg");
+
+      &:hover {
+        background-image: url("#{$svg}/next_h.svg");
+      }
+    }
+  }
+
+  &__dots {
+    width: 380px;
+    position: relative;
+
+    .owl-stage-outer {
+      overflow: hidden;
+      padding: 15px 0 15px 40px;
+    }
+
+    .owl-stage {
+      display: flex;
+    }
+  }
+
+  &__dot {
+    background-color: #ccc;
+    width: 58px;
+    height: 58px;
+    margin: 0 20px;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid transparent;
+    z-index: 1;
+    box-sizing: border-box;
+    @include transition-all(.2s);
+
+    &::before {
+      background-color: $main_c;
+      content: '';
+      border-radius: 50%;
+      opacity: .2;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      bottom: -6px;
+      left: -6px;
+      z-index: -1;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+      }
+    }
+  }
+
+  .center &__dot, &__dot:hover {
+    border-color: $main_c;
+    margin-top: -10px;
+  }
+}

@@ -1,0 +1,27 @@
+.purchase {
+  background-color: #1c2a33;
+  padding: 120px 0 125px;
+  font-family: $f_montserrat;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 35px;
+    color: $main_c;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    margin-bottom: 80px;
+    color: #d8d8d8;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__footer {
+    z-index: 1;
+    position: relative;
+  }
+}

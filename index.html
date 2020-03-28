@@ -4,648 +4,1019 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Preview 1</title>
     <link rel="stylesheet" href="dist/css/main.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 
 <body>
-    <main id="site" class="site">
-        <header class="header">
-            <div class="container">
-                <div class="row">
-                    <a href="/" class="header__logo logo">
-                        <img src="img/icon/logo.png" alt="Logo">
-                    </a>
-                    <div class="header__menu menu">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="/" class="menu__link">home</a></li>
-                            <li class="menu__item"><a href="#features" class="menu__link jsScrollTo">features</a></li>
-                            <li class="menu__item"><a href="#experience" class="menu__link jsScrollTo">Company</a></li>
-                            <li class="menu__item"><a href="#portfolio" class="menu__link jsScrollTo">Works</a></li>
-                            <li class="menu__item"><a href="#pricing" class="menu__link jsScrollTo">pricing</a></li>
-                            <li class="menu__item"><a href="#contact" class="menu__link jsScrollTo">contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="header__find find">
-                        <button class="find__btn" onclick="toggleSearchForm()">
-                            <img src="img/icon/search_icon.png" alt="search" class="find__img">
-                            <img src="img/icon/search_icon_h.png" alt="search" class="find__img find__img_hover">
+<main id="site" class="site">
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <a href="/" class="header__logo logo">
+                    <img src="img/icon/logo.png" alt="Logo">
+                </a>
+                <div class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/" class="menu__link">home</a></li>
+                        <li class="menu__item"><a href="#features" class="menu__link jsScrollTo">features</a></li>
+                        <li class="menu__item"><a href="#experience" class="menu__link jsScrollTo">Company</a></li>
+                        <li class="menu__item"><a href="#portfolio" class="menu__link jsScrollTo">Works</a></li>
+                        <li class="menu__item"><a href="#pricing" class="menu__link jsScrollTo">pricing</a></li>
+                        <li class="menu__item"><a href="#contact" class="menu__link jsScrollTo">contact</a></li>
+                    </ul>
+                </div>
+                <div class="header__find find">
+                    <button class="find__btn" onclick="toggleSearchForm();">
+                        <img src="img/icon/search_icon.png" alt="search" class="find__img">
+                        <img src="img/icon/search_icon_h.png" alt="search" class="find__img find__img_hover">
+                    </button>
+                </div>
+
+                <div class="header__search search" id="jsSearchForm">
+                    <form action="#" class="search__form">
+                        <input type="text" class="search__field" placeholder="Type & search...">
+                        <button class="search__submit" type="submit">
+                            <img src="img/icon/search_icon.png" alt="img">
                         </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="home" class="home">
+        <div class="home__slider slider">
+            <ul class="slider__list jsFullScreenSlider">
+                <li class="slider__item ibg"><img src="img/slides/1.jpg" alt="img1"></li>
+                <li class="slider__item ibg"><img src="img/slides/2.jpg" alt="img2"></li>
+                <li class="slider__item ibg"><img src="img/slides/3.jpg" alt="img3"></li>
+                <li class="slider__item ibg"><img src="img/slides/4.jpg" alt="img3"></li>
+            </ul>
+        </div>
+
+        <div class="container home__container">
+            <div class="home__content content">
+                <div class="content__slogan">
+                    <h2 class="content__subtitle">The Ham is <span class="_green-text">Wordpress theme</span>
+                    </h2>
+                    <h1 class="content__title">we are creative</h1>
+                    <h3 class="content__thirdtitle">Just Buy And Enjoy These Awesome Features</h3>
+                </div>
+
+                <div class="content__action">
+                    <button class="content__action-btn btn _green">EXPLORE NOW</button>
+                    <button class="content__action-btn btn _blue">purchase now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <section id="advantages">
+            <ul class="option-line">
+                <li class="option-line__item">
+                    <img src="img/icon/finger.png" alt="option">
+                    <p>Different theme option</p>
+                </li>
+                <li class="option-line__item">
+                    <img src="img/icon/diamond.png" alt="option">
+                    <p>fully customizable</p>
+                </li>
+                <li class="option-line__item">
+                    <img src="img/icon/green_lamp.png" alt="option">
+                    <p>unlimited support</p>
+                </li>
+                <li class="option-line__item">
+                    <img src="img/icon/devices.png" alt="option">
+                    <p>responsive all device</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="features" class="block features">
+            <div class="container">
+                <h2 class="block__title">Creative Amazing Features</h2>
+
+                <ul class="features__list">
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/leaf.png" alt="">
+                            <span>Retina Ready</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/edit.png" alt="">
+                            <span>Creativet Blog Style</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/zoom_g.png" alt="">
+                            <span>Icon Fonts</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/sandclock.png" alt="">
+                            <span>Parallax Effects</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/laptop.png" alt="">
+                            <span>Amazing Interface</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/tools.png" alt="">
+                            <span>SEO Optimized</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/lamp.png" alt="">
+                            <span>Creative Solutions</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/plain.png" alt="">
+                            <span>Mega Menus</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                    <li class="features__item">
+                        <h4 class="features__title">
+                            <img src="img/icon/contact.png" alt="">
+                            <span>Custom Backgrounds</span>
+                        </h4>
+                        <p class="features__desc">All our modules are built with the possi bility to thse choose
+                            between different design and you change.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="experience" class="experience block block_dark">
+            <img src="" alt="" class="experience__bg">
+
+            <div class="container">
+                <div class="twin-block">
+                    <div class="twin-block__item"></div>
+                    <div class="twin-block__item experience__right">
+                        <h2 class="block__title">About Our Company</h2>
+
+                        <div class="experience__tab tab jsTab">
+                            <div class="experience__head">
+                                <button class="experience__btn" data-tab-btn="history">our History</button>
+                                <button class="experience__btn" data-tab-btn="biography">our Biography</button>
+                                <button class="experience__btn" data-tab-btn="skills">our Skills</button>
+                            </div>
+                            <div class="experience__body">
+                                <div class="experience__content" data-tab-content="history">
+                                    <div class="history">
+                                        <div class="history__text experience__text">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                                                repellat explicabo laborum culpa quas consequatur quae rem
+                                                consequuntur enim? Recusandae assumenda velit reprehenderit officia
+                                                dolore.</p>
+                                        </div>
+
+                                        <ul class="history__check-list">
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                            <li class="history__check-item">Excepteur sint occaecat sint.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="experience__content" data-tab-content="biography">
+                                    <div class="biography experience__text">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit libero
+                                            facilis reprehenderit voluptatem vitae soluta porro dolorum illo, quo
+                                            perspiciatis aperiam excepturi provident ipsam aliquid vel voluptatibus
+                                            voluptate nemo harum.</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit
+                                            soluta nam laboriosam porro aut dolores.</p>
+                                    </div>
+                                </div>
+                                <div class="experience__content" data-tab-content="skills">
+                                    <ul class="skills">
+                                        <li class="skills__item">
+                                            <span class="skills__item-proggress"></span>
+                                            <span class="skills__text">User Interface</span>
+                                        </li>
+                                        <li class="skills__item">
+                                            <span class="skills__item-proggress"></span>
+                                            <span class="skills__text">Web Design</span>
+                                        </li>
+                                        <li class="skills__item">
+                                            <span class="skills__item-proggress"></span>
+                                            <span class="skills__text">Wordpress</span>
+                                        </li>
+                                        <li class="skills__item">
+                                            <span class="skills__item-proggress"></span>
+                                            <span class="skills__text">HTML & CSS</span>
+                                        </li>
+                                        <li class="skills__item">
+                                            <span class="skills__item-proggress"></span>
+                                            <span class="skills__text">App Design</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio block">
+            <div class="container">
+
+                <h2 class="block__title">Our Amazing Work</h2>
+
+                <div class="portfolio__body filter">
+                    <ul class="filter__head">
+                        <li class="filter__btn jsFilterBtn _filter-active" data-filter="all">All</li>
+                        <li class="filter__btn jsFilterBtn" data-filter="graphic">Graphic Design</li>
+                        <li class="filter__btn jsFilterBtn" data-filter="web">Web Design</li>
+                        <li class="filter__btn jsFilterBtn" data-filter="landing">Landing Pages</li>
+                        <li class="filter__btn jsFilterBtn" data-filter="wordpress">Wordpress</li>
+                    </ul>
+                    <div class="filter__body jsPortfolio">
+                        <div class="jsPortfolioItem" data-category="graphic">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">graphic design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/graphic_design/1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="wordpress">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">wordpress</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/wordpress/1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="landing">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">landing page</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/landing/1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="wordpress">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">wordpress</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/wordpress/2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="web">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">web design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/web_design/1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="wordpress">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">wordpress</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/wordpress/3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="landing">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">landing page</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/landing/2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="web">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">web design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/web_design/2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="graphic">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">graphic design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/graphic_design/2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="landing">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">landing page</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/landing/3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="web">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">web design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/web_design/3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jsPortfolioItem" data-category="graphic">
+                            <div class="filter__item item">
+                                <div class="item__overlay">
+                                    <div class="_row">
+                                        <button class="item__icon item__icon_share"></button>
+                                        <button class="item__icon item__icon_zoom"></button>
+                                    </div>
+                                    <h4 class="item__title">creative design</h4>
+                                    <h6 class="item__category">graphic design</h6>
+                                </div>
+                                <div class="item__content ibg">
+                                    <img src="img/graphic_design/3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="header__search search" id="jsSearchForm">
-                        <form action="#" class="search__form">
-                            <input type="text" class="search__field" placeholder="Type & search...">
-                            <button class="search__submit" type="submit">
-                                <img src="img/icon/search_icon.png" alt="img">
-                            </button>
+                    <div class="filter__footer">
+                        <button class="filter__more btn _green">
+                            <i class="filter__more-icon"></i>
+                            <span>load more</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sevice" class="sevice block">
+            <div class="container">
+                <h2 class="block__title">Our Services</h2>
+
+                <div class="service__tabs jsTab">
+                    <div class="service__head">
+                        <button class="service__btn" data-tab-btn="web">Web Design</button>
+                        <button class="service__btn" data-tab-btn="graphic">Graphic Design</button>
+                        <button class="service__btn" data-tab-btn="support">Online Support</button>
+                        <button class="service__btn" data-tab-btn="app">App Design</button>
+                        <button class="service__btn" data-tab-btn="marketing">Online Marketing</button>
+                        <button class="service__btn" data-tab-btn="seo">Seo Service</button>
+                    </div>
+
+                    <div class="service__body">
+                        <div class="service__content" data-tab-content="web">
+                            <div class="_row">
+                                <img src="img/web_design/1.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eum impedit
+                                    laudantium, perspiciatis quas quidem reprehenderit vero? Ab, accusamus accusantium
+                                    atque consectetur culpa dicta dignissimos ducimus enim est facere, fugit laboriosam
+                                    ratione sapiente, similique sit soluta voluptate? Ad autem eaque inventore molestiae
+                                    tenetur. A commodi dolorem error facere illum ratione velit, voluptatum? Aliquid
+                                    blanditiis debitis deleniti eos, expedita incidunt laboriosam laborum laudantium
+                                    minima, neque quasi ratione sint tempore veniam voluptas.</p>
+                            </div>
+                        </div>
+                        <div class="service__content" data-tab-content="graphic">
+                            <div class="_row">
+                                <img src="img/web_design/2.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab assumenda commodi
+                                    consequuntur, culpa dignissimos ducimus eaque eius, enim expedita impedit itaque
+                                    iusto minima molestias neque nihil nostrum numquam odio placeat porro quas rerum
+                                    saepe sapiente voluptatibus. Assumenda, at consequatur eveniet itaque nemo nisi,
+                                    praesentium quam quos soluta tenetur vero voluptate voluptates. A cumque debitis
+                                    deserunt doloribus et, facilis in, ipsam maxime minima nihil omnis quas quod
+                                    repellendus reprehenderit, sequi totam!</p>
+                            </div>
+                        </div>
+                        <div class="service__content" data-tab-content="support">
+                            <div class="_row">
+                                <img src="img/web_design/3.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A debitis delectus
+                                    doloribus facilis impedit laborum minus nesciunt perferendis quae quisquam quos
+                                    sint, unde ut! Adipisci error molestiae nemo non nulla optio perspiciatis porro
+                                    provident quia quos, repellendus, sapiente sint sit tempora voluptatibus! Animi
+                                    error ipsa itaque molestias nulla provident quibusdam reprehenderit? Ab autem cum in
+                                    pariatur perferendis porro provident totam. Necessitatibus rerum temporibus vitae?
+                                    Assumenda ipsa quam quasi reprehenderit temporibus?</p>
+                            </div>
+                        </div>
+                        <div class="service__content" data-tab-content="app">
+                            <div class="_row">
+                                <img src="img/graphic_design/1.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur culpa
+                                    cum debitis earum excepturi id, incidunt magnam, nesciunt provident quia similique
+                                    voluptates. Delectus eius error, hic iure magni maxime odit placeat quis quod rem
+                                    sapiente soluta voluptate voluptatem. Aspernatur consectetur consequatur, error esse
+                                    eveniet, id ipsam itaque laboriosam nemo nihil non optio provident, quaerat ratione
+                                    sequi velit vitae voluptates. Adipisci commodi dicta dolore facere nisi obcaecati
+                                    quam ut veritatis.</p>
+                            </div>
+                        </div>
+                        <div class="service__content" data-tab-content="marketing">
+                            <div class="_row">
+                                <img src="img/graphic_design/2.png" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque nihil odio placeat!
+                                    Cum deserunt ipsam non numquam quas qui quis repudiandae? Accusantium ad asperiores
+                                    beatae culpa deserunt eaque eligendi id illo illum inventore, itaque laboriosam
+                                    molestias porro, quas rerum soluta voluptates voluptatum. Ab accusamus blanditiis
+                                    consequuntur corporis cumque deleniti ipsa nam nihil quae quaerat, quibusdam quo
+                                    reiciendis repellat tenetur, ut. Aspernatur culpa dolorum enim magnam nemo optio
+                                    ratione reprehenderit repudiandae.</p>
+                            </div>
+                        </div>
+                        <div class="service__content" data-tab-content="seo">
+                            <div class="_row">
+                                <img src="img/graphic_design/3.jpg" alt="">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi
+                                    consectetur consequatur dolor doloribus, eligendi enim et fugit itaque molestiae
+                                    molestias natus numquam obcaecati repellat, saepe, sit temporibus vero voluptatibus.
+                                    Architecto atque blanditiis cumque, cupiditate dolorum eos eum, eveniet fugit ipsam
+                                    iusto molestiae molestias nihil nobis nulla similique ullam vel voluptatem
+                                    voluptatibus! A adipisci assumenda cumque distinctio doloremque expedita illo ipsam
+                                    modi nemo nihil odit placeat rem tempora, tempore vero!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="purchase" class="purchase">
+            <div class="container">
+                <h2 class="purchase__title">Everything is ready. just buy and install now</h2>
+                <div class="purchase__desc">Smooth reliable, responsive ready, perfect portfolio, unique blog layout and
+                    many many options for you
+                </div>
+                <div class="purchase__footer">
+                    <button class="purchase__btn btn _green">purchase now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news block">
+            <div class="container">
+                <h2 class="block__title">Breaking News</h2>
+
+                <div class="news__list">
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__item item">
+                        <div class="item__head">
+                            <span class="item__date">
+                                <span>12 Feb</span>
+                            </span>
+                            <span class="item__img ibg">
+                                <img src="img/web_design/3.jpg" alt="">
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <h3 class="item__title"><a href="#">Post</a></h3>
+                            <div class="item__info _row">
+                                <p>by admin</p>
+                                <span>|</span>
+                                <a href="#"><span>2</span> comments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="success" class="success">
+            <ul class="option-line jsAniateOnScorll">
+                <li class="option-line__item success__item">
+                        <span class="success__icon">
+                            <img src="img/icon/case.png" alt="case">
+                        </span>
+                    <span class="success__count jsCount">4609</span>
+                    <span class="success__text">Works</span>
+                </li>
+                <li class="option-line__item success__item">
+                        <span class="success__icon">
+                            <img src="img/icon/person.png" alt="case">
+                        </span>
+                    <span class="success__count jsCount">3470</span>
+                    <span class="success__text">Customers</span>
+                </li>
+                <li class="option-line__item success__item">
+                        <span class="success__icon">
+                            <img src="img/icon/bin.png" alt="case">
+                        </span>
+                    <span class="success__count jsCount">2908</span>
+                    <span class="success__text">Purchase</span>
+                </li>
+                <li class="option-line__item success__item">
+                        <span class="success__icon">
+                            <img src="img/icon/map_point.png" alt="case">
+                        </span>
+                    <span class="success__count jsCount">1908</span>
+                    <span class="success__text">Office</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="pricing" class="pricing block jsAniateOnScorll">
+            <div class="container">
+                <h2 class="block__title">Our Pricing Table</h2>
+
+                <ul class="pricing__list">
+                    <li class="pricing__offer offer">
+                        <div class="offer__header">
+                            <div class="offer__label">offer</div>
+                            <h3 class="offer__text">person</h3>
+                        </div>
+                        <div class="offer__price price">
+                            <span class="price__currency">$</span>
+                            <span class="price__value jsCount">99</span>
+                            <span class="price__period">month</span>
+                        </div>
+                        <ul class="offer__list">
+                            <li class="offer__list-item">1 Hosting</li>
+                            <li class="offer__list-item">2 Email Marketing</li>
+                            <li class="offer__list-item">5 Database</li>
+                            <li class="offer__list-item">2 Design Pack</li>
+                            <li class="offer__list-item">3 Website Layouts</li>
+                            <li class="offer__list-item">5 Header Style</li>
+                            <li class="offer__list-item">3 Online Store</li>
+                        </ul>
+                        <div class="offer__footer">
+                            <button class="offer__btn">buy now</button>
+                        </div>
+                    </li>
+                    <li class="pricing__offer offer">
+                        <div class="offer__header">
+                            <div class="offer__label">offer</div>
+                            <h3 class="offer__text">Business</h3>
+                        </div>
+                        <div class="offer__price price">
+                            <span class="price__currency">$</span>
+                            <span class="price__value jsCount">199</span>
+                            <span class="price__period">month</span>
+                        </div>
+                        <ul class="offer__list">
+                            <li class="offer__list-item">1 Hosting</li>
+                            <li class="offer__list-item">2 Email Marketing</li>
+                            <li class="offer__list-item">5 Database</li>
+                            <li class="offer__list-item">2 Design Pack</li>
+                            <li class="offer__list-item">3 Website Layouts</li>
+                            <li class="offer__list-item">5 Header Style</li>
+                            <li class="offer__list-item">3 Online Store</li>
+                        </ul>
+                        <div class="offer__footer">
+                            <button class="offer__btn">buy now</button>
+                        </div>
+                    </li>
+                    <li class="pricing__offer offer">
+                        <div class="offer__header">
+                            <div class="offer__label">offer</div>
+                            <h3 class="offer__text">Professional</h3>
+                        </div>
+                        <div class="offer__price price">
+                            <span class="price__currency">$</span>
+                            <span class="price__value jsCount">299</span>
+                            <span class="price__period">month</span>
+                        </div>
+                        <ul class="offer__list">
+                            <li class="offer__list-item">1 Hosting</li>
+                            <li class="offer__list-item">2 Email Marketing</li>
+                            <li class="offer__list-item">5 Database</li>
+                            <li class="offer__list-item">2 Design Pack</li>
+                            <li class="offer__list-item">3 Website Layouts</li>
+                            <li class="offer__list-item">5 Header Style</li>
+                            <li class="offer__list-item">3 Online Store</li>
+                        </ul>
+                        <div class="offer__footer">
+                            <button class="offer__btn">buy now</button>
+                        </div>
+                    </li>
+                    <li class="pricing__offer offer">
+                        <div class="offer__header">
+                            <div class="offer__label">offer</div>
+                            <h3 class="offer__text">diamond</h3>
+                        </div>
+                        <div class="offer__price price">
+                            <span class="price__currency">$</span>
+                            <span class="price__value jsCount">399</span>
+                            <span class="price__period">month</span>
+                        </div>
+                        <ul class="offer__list">
+                            <li class="offer__list-item">1 Hosting</li>
+                            <li class="offer__list-item">2 Email Marketing</li>
+                            <li class="offer__list-item">5 Database</li>
+                            <li class="offer__list-item">2 Design Pack</li>
+                            <li class="offer__list-item">3 Website Layouts</li>
+                            <li class="offer__list-item">5 Header Style</li>
+                            <li class="offer__list-item">3 Online Store</li>
+                        </ul>
+                        <div class="offer__footer">
+                            <button class="offer__btn">buy now</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="comments" class="comments block block_dark">
+            <div class="container">
+                <h2 class="block__title">What People Say About theHam</h2>
+
+                <div class="comments__body">
+                    <div class="comments__slider slider jsCommentsSlider">
+                        <div class="slider__item slide">
+                            <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                                commodi cupiditate
+                                facere, ipsum quis recusandae?</p>
+                            <h4 class="slide__name">Hasan Ali</h4>
+                            <div class="slide__position">UX Designer</div>
+                            <div class="slide__avatar">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__item slide">
+                            <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                                commodi cupiditate
+                                facere, ipsum quis recusandae?</p>
+                            <h4 class="slide__name">Hasan Ali</h4>
+                            <div class="slide__position">UX Designer</div>
+                            <div class="slide__avatar">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__item slide">
+                            <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                                commodi cupiditate
+                                facere, ipsum quis recusandae?</p>
+                            <h4 class="slide__name">Hasan Ali</h4>
+                            <div class="slide__position">UX Designer</div>
+                            <div class="slide__avatar">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__item slide">
+                            <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+                                commodi cupiditate
+                                facere, ipsum quis recusandae?</p>
+                            <h4 class="slide__name">Hasan Ali</h4>
+                            <div class="slide__position">UX Designer</div>
+                            <div class="slide__avatar">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comments__controls">
+                        <button class="comments__arrow _jsPrevComment"></button>
+
+                        <div class="comments__dots jsCommentsDots">
+                            <div class="comments__dot">
+                                <div class="comments__dot-item">
+                                    <div class="comments__dot-img">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments__dot">
+                                <div class="comments__dot-item">
+                                    <div class="comments__dot-img">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments__dot">
+                                <div class="comments__dot-item">
+                                    <div class="comments__dot-img">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comments__dot">
+                                <div class="comments__dot-item">
+                                    <div class="comments__dot-img">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="comments__arrow _jsNextComment"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="team block">
+            <div class="container">
+                <h2 class="block__title">Meet Our Team</h2>
+
+                <div class="team__body">
+                    <div class="team__member member">
+                        <div class="member__avatar">
+                            <div class="member__overlay"></div>
+                            <img src="" alt="">
+                        </div>
+                        <h4 class="member__title">Al Masum</h4>
+                        <div class="member__position">Founder</div>
+                        <div class="member__footer">
+                            <div class="member__social"></div>
+                            <div class="member__social"></div>
+                            <div class="member__social"></div>
+                            <div class="member__social"></div>
+                        </div>
+                    </div>
+                    <div class="team__member"></div>
+                    <div class="team__member"></div>
+                    <div class="team__member"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact block block_dark">
+            <div class="container">
+                <div class="twin-block">
+                    <div class="twin-block__item"></div>
+                    <div class="twin-block__item">
+                        <div class="contact__header">
+                            <h2 class="block__title">Keep In Touch</h2>
+                        </div>
+
+                        <form action="#" class="contact__form form">
+                            <div class="form__field">
+                                <input class="form__text" type="text" placeholder="Name">
+                            </div>
+
+                            <div class="form__field">
+                                <input class="form__text" type="text" placeholder="Email">
+                            </div>
+
+                            <div class="form__field">
+                                <textarea class="form__textarea" type="text" rows="9" placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="form__field">
+                                <button class="form__submit btn _green">send request</button>
+                            </div>
+
                         </form>
                     </div>
                 </div>
             </div>
-        </header>
+        </section>
+    </div>
 
-        <div id="home" class="home">
-            <div class="home__slider slider">
-                <ul class="slider__list jsFullScreenSlider">
-                    <li class="slider__item"><img src="img/slides/1.jpg" alt="img1"></li>
-                    <li class="slider__item"><img src="img/slides/2.jpg" alt="img2"></li>
-                    <li class="slider__item"><img src="img/slides/3.jpg" alt="img3"></li>
-                    <li class="slider__item"><img src="img/slides/4.jpg" alt="img3"></li>
-                </ul>
-            </div>
-
-            <div class="container home__container">
-                <div class="home__content content">
-                    <div class="content__slogan">
-                        <h2 class="content__subtitle">The Ham is <span class="_green-text">Wordpress theme</span>
-                        </h2>
-                        <h1 class="content__title">we are creative</h1>
-                        <h3 class="content__thirdtitle">Just Buy And Enjoy These Awesome Features</h3>
-                    </div>
-
-                    <div class="content__action">
-                        <button class="content__action-btn btn _green">EXPLORE NOW</button>
-                        <button class="content__action-btn btn _blue">purchase now</button>
-                    </div>
-                </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__copy">
+                Copyright 2015 <span class="footer__text-green">theHam</span> | All Rights Reserved
             </div>
         </div>
+    </footer>
+</main>
 
-        <div class="main">
-            <section id="advantages">
-                <ul class="option-line">
-                    <li class="option-line__item">
-                        <img src="img/icon/finger.png" alt="option">
-                        <p>Different theme option</p>
-                    </li>
-                    <li class="option-line__item">
-                        <img src="img/icon/diamond.png" alt="option">
-                        <p>fully customizable</p>
-                    </li>
-                    <li class="option-line__item">
-                        <img src="img/icon/green_lamp.png" alt="option">
-                        <p>unlimited support</p>
-                    </li>
-                    <li class="option-line__item">
-                        <img src="img/icon/devices.png" alt="option">
-                        <p>responsive all device</p>
-                    </li>
-                </ul>
-            </section>
+<!-- LIB -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-            <section id="features" class="block features">
-                <div class="container">
-                    <h2 class="block__title">Creative Amazing Features</h2>
+<!-- PLUGINS -->
+<script src='js/jquery.filterizr.min.js'></script>
+<script src="js/owl.carousel.min.js"></script>
 
-                    <ul class="features__list">
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/leaf.png" alt="">
-                                <span>Retina Ready</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/edit.png" alt="">
-                                <span>Creativet Blog Style</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/zoom_g.png" alt="">
-                                <span>Icon Fonts</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/sandclock.png" alt="">
-                                <span>Parallax Effects</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/laptop.png" alt="">
-                                <span>Amazing Interface</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/tools.png" alt="">
-                                <span>SEO Optimized</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/lamp.png" alt="">
-                                <span>Creative Solutions</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/plain.png" alt="">
-                                <span>Mega Menus</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                        <li class="features__item">
-                            <h4 class="features__title">
-                                <img src="img/icon/contact.png" alt="">
-                                <span>Custom Backgrounds</span>
-                            </h4>
-                            <p class="features__desc">All our modules are built with the possi bility to thse choose
-                                between different design and you change.</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="experience" class="experience block block_dark">
-                <img src="" alt="" class="experience__bg">
-
-                <div class="container">
-                    <div class="twin-block">
-                        <div class="twin-block__item"></div>
-                        <div class="twin-block__item experience__right">
-                            <h2 class="block__title">About Our Company</h2>
-
-                            <div class="experience__tab tab jsTab">
-                                <div class="experience__head">
-                                    <button class="experience__btn" data-tab-btn="history">our History</button>
-                                    <button class="experience__btn" data-tab-btn="biography">our Biography</button>
-                                    <button class="experience__btn" data-tab-btn="skills">our Skills</button>
-                                </div>
-                                <div class="experience__body">
-                                    <div class="experience__content" data-tab-content="history">
-                                        <div class="history">
-                                            <div class="history__text experience__text">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-                                                    repellat explicabo laborum culpa quas consequatur quae rem
-                                                    consequuntur enim? Recusandae assumenda velit reprehenderit officia
-                                                    dolore.</p>
-                                            </div>
-
-                                            <ul class="history__check-list">
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                                <li class="history__check-item">Excepteur sint occaecat sint.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="experience__content" data-tab-content="biography">
-                                        <div class="biography experience__text">
-                                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit libero
-                                                facilis reprehenderit voluptatem vitae soluta porro dolorum illo, quo
-                                                perspiciatis aperiam excepturi provident ipsam aliquid vel voluptatibus
-                                                voluptate nemo harum.</p>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit
-                                                soluta nam laboriosam porro aut dolores.</p>
-                                        </div>
-                                    </div>
-                                    <div class="experience__content" data-tab-content="skills">
-                                        <ul class="skills">
-                                            <li class="skills__item">
-                                                <span class="skills__item-proggress"></span>
-                                                <span class="skills__text">User Interface</span>
-                                            </li>
-                                            <li class="skills__item">
-                                                <span class="skills__item-proggress"></span>
-                                                <span class="skills__text">Web Design</span>
-                                            </li>
-                                            <li class="skills__item">
-                                                <span class="skills__item-proggress"></span>
-                                                <span class="skills__text">Wordpress</span>
-                                            </li>
-                                            <li class="skills__item">
-                                                <span class="skills__item-proggress"></span>
-                                                <span class="skills__text">HTML & CSS</span>
-                                            </li>
-                                            <li class="skills__item">
-                                                <span class="skills__item-proggress"></span>
-                                                <span class="skills__text">App Design</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio" class="portfolio block">
-                <div class="container">
-
-                    <h2 class="block__title">Our Amazing Work</h2>
-
-                    <div class="portfolio__body filter">
-                        <ul class="filter__head">
-                            <li class="filter__btn jsFilterBtn _filter-active" data-filter="all">All</li>
-                            <li class="filter__btn jsFilterBtn" data-filter="graphic">Graphic Design</li>
-                            <li class="filter__btn jsFilterBtn" data-filter="web">Web Design</li>
-                            <li class="filter__btn jsFilterBtn" data-filter="landing">Landing Pages</li>
-                            <li class="filter__btn jsFilterBtn" data-filter="wordpress">Wordpress</li>
-                        </ul>
-                        <div class="filter__body jsPortfolio">
-                            <div class="jsPortfolioItem" data-category="graphic">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">graphic design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/graphic_design/1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="wordpress">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">wordpress</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/wordpress/1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="landing">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">landing page</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/landing/1.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="wordpress">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">wordpress</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/wordpress/2.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="web">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">web design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/web_design/1.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="wordpress">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">wordpress</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/wordpress/3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="landing">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">landing page</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/landing/2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="web">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">web design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/web_design/2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="graphic">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">graphic design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/graphic_design/2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="landing">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">landing page</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/landing/3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="web">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">web design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/web_design/3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="jsPortfolioItem" data-category="graphic">
-                                <div class="filter__item item">
-                                    <div class="item__overlay">
-                                        <div class="_row">
-                                            <button class="item__icon item__icon_share"></button>
-                                            <button class="item__icon item__icon_zoom"></button>
-                                        </div>
-                                        <h4 class="item__title">creative design</h4>
-                                        <h6 class="item__category">graphic design</h6>
-                                    </div>
-                                    <div class="item__content ibg">
-                                        <img src="img/graphic_design/3.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="filter__footer">
-                            <button class="filter__more btn _green">
-                                <i class="filter__more-icon"></i>
-                                <span>load more</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="success" class="success">
-                <ul class="option-line jsAniateOnScorll">
-                    <li class="option-line__item success__item">
-                        <span class="success__icon">
-                            <img src="img/icon/case.png" alt="case">
-                        </span>
-                        <span class="success__count jsCount">4609</span>
-                        <span class="success__text">Works</span>
-                    </li>
-                    <li class="option-line__item success__item">
-                        <span class="success__icon">
-                            <img src="img/icon/person.png" alt="case">
-                        </span>
-                        <span class="success__count jsCount">3470</span>
-                        <span class="success__text">Customers</span>
-                    </li>
-                    <li class="option-line__item success__item">
-                        <span class="success__icon">
-                            <img src="img/icon/bin.png" alt="case">
-                        </span>
-                        <span class="success__count jsCount">2908</span>
-                        <span class="success__text">Purchase</span>
-                    </li>
-                    <li class="option-line__item success__item">
-                        <span class="success__icon">
-                            <img src="img/icon/map_point.png" alt="case">
-                        </span>
-                        <span class="success__count jsCount">1908</span>
-                        <span class="success__text">Office</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="pricing" class="pricing block jsAniateOnScorll">
-                <div class="container">
-                    <h2 class="block__title">Our Pricing Table</h2>
-
-                    <ul class="pricing__list">
-                        <li class="pricing__offer offer">
-                            <div class="offer__header">
-                                <div class="offer__label">offer</div>
-                                <h3 class="offer__text">person</h3>
-                            </div>
-                            <div class="offer__price price">
-                                <span class="price__currency">$</span>
-                                <span class="price__value jsCount">99</span>
-                                <span class="price__period">month</span>
-                            </div>
-                            <ul class="offer__list">
-                                <li class="offer__list-item">1 Hosting</li>
-                                <li class="offer__list-item">2 Email Marketing</li>
-                                <li class="offer__list-item">5 Database</li>
-                                <li class="offer__list-item">2 Design Pack</li>
-                                <li class="offer__list-item">3 Website Layouts</li>
-                                <li class="offer__list-item">5 Header Style</li>
-                                <li class="offer__list-item">3 Online Store</li>
-                            </ul>
-                            <div class="offer__footer">
-                                <button class="offer__btn">buy now</button>
-                            </div>
-                        </li>
-                        <li class="pricing__offer offer">
-                            <div class="offer__header">
-                                <div class="offer__label">offer</div>
-                                <h3 class="offer__text">Business</h3>
-                            </div>
-                            <div class="offer__price price">
-                                <span class="price__currency">$</span>
-                                <span class="price__value jsCount">199</span>
-                                <span class="price__period">month</span>
-                            </div>
-                            <ul class="offer__list">
-                                <li class="offer__list-item">1 Hosting</li>
-                                <li class="offer__list-item">2 Email Marketing</li>
-                                <li class="offer__list-item">5 Database</li>
-                                <li class="offer__list-item">2 Design Pack</li>
-                                <li class="offer__list-item">3 Website Layouts</li>
-                                <li class="offer__list-item">5 Header Style</li>
-                                <li class="offer__list-item">3 Online Store</li>
-                            </ul>
-                            <div class="offer__footer">
-                                <button class="offer__btn">buy now</button>
-                            </div>
-                        </li>
-                        <li class="pricing__offer offer">
-                            <div class="offer__header">
-                                <div class="offer__label">offer</div>
-                                <h3 class="offer__text">Professional</h3>
-                            </div>
-                            <div class="offer__price price">
-                                <span class="price__currency">$</span>
-                                <span class="price__value jsCount">299</span>
-                                <span class="price__period">month</span>
-                            </div>
-                            <ul class="offer__list">
-                                <li class="offer__list-item">1 Hosting</li>
-                                <li class="offer__list-item">2 Email Marketing</li>
-                                <li class="offer__list-item">5 Database</li>
-                                <li class="offer__list-item">2 Design Pack</li>
-                                <li class="offer__list-item">3 Website Layouts</li>
-                                <li class="offer__list-item">5 Header Style</li>
-                                <li class="offer__list-item">3 Online Store</li>
-                            </ul>
-                            <div class="offer__footer">
-                                <button class="offer__btn">buy now</button>
-                            </div>
-                        </li>
-                        <li class="pricing__offer offer">
-                            <div class="offer__header">
-                                <div class="offer__label">offer</div>
-                                <h3 class="offer__text">diamond</h3>
-                            </div>
-                            <div class="offer__price price">
-                                <span class="price__currency">$</span>
-                                <span class="price__value jsCount">399</span>
-                                <span class="price__period">month</span>
-                            </div>
-                            <ul class="offer__list">
-                                <li class="offer__list-item">1 Hosting</li>
-                                <li class="offer__list-item">2 Email Marketing</li>
-                                <li class="offer__list-item">5 Database</li>
-                                <li class="offer__list-item">2 Design Pack</li>
-                                <li class="offer__list-item">3 Website Layouts</li>
-                                <li class="offer__list-item">5 Header Style</li>
-                                <li class="offer__list-item">3 Online Store</li>
-                            </ul>
-                            <div class="offer__footer">
-                                <button class="offer__btn">buy now</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="contact" class="contact block block_dark">
-                <div class="container">
-                    <div class="twin-block">
-                        <div class="twin-block__item"></div>
-                        <div class="twin-block__item">
-                            <div class="contact__header">
-                                <h2 class="block__title">Keep In Touch</h2>
-                            </div>
-
-                            <form action="#" class="contact__form form">
-                                <div class="form__field">
-                                    <input class="form__text" type="text" placeholder="Name">
-                                </div>
-
-                                <div class="form__field">
-                                    <input class="form__text" type="text" placeholder="Email">
-                                </div>
-
-                                <div class="form__field">
-                                    <textarea class="form__textarea" type="text" rows="9" placeholder="Message"></textarea>
-                                </div>
-
-                                <div class="form__field">
-                                    <button class="form__submit btn _green">send request</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__copy">
-                    Copyright 2015 <span class="footer__text-green">theHam</span> | All Rights Reserved
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- PLUGINS -->
-    <script src="js/jquery.filterizr.min.js"></script>
-    <script src="js/slick.min.js"></script>
-
-    <!-- CUSTOM JS -->
-    <script src="dist/js/main.js"></script>
+<!-- CUSTOM JS -->
+<script src="dist/js/main.js"></script>
 </body>
 
 </html>

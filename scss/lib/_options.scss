@@ -4,14 +4,9 @@
 
 /* ===== VARs ===== */
 // Fonts
-$_base: "Arial",
-sans-serif;
-$f_montserrat: "Montserrat",
-sans-serif,
-$_base;
-$f_maven: "Maven Pro",
-sans-serif,
-$_base;
+$_base: "Arial", sans-serif;
+$f_montserrat: "Montserrat", sans-serif, $_base;
+$f_maven: "Maven Pro", sans-serif, $_base;
 
 // Colors
 $main_c: #18cfab;
@@ -29,7 +24,6 @@ $text_c: #777777;
 $headline_c: #4e4e4e;
 $placeholder_c: #a5a5a5;
 
-
 // SIZE
 $w_xl: 1140;
 $w_lg: 930;
@@ -41,82 +35,80 @@ $w_xs: 300;
 $icons: "../../img/icon";
 $svg: "../../img/svg";
 
-
-
-/* ===== MIXINs & Functions ===== */
+/* ===== MIXIN & Functions ===== */
 @function rem($px) {
-    @return ($px / 16)+rem;
+  @return ($px / 16)+rem;
 }
 
 @mixin transition-all($time: .3s, $option: all) {
-    transition: $option $time;
+  transition: $option $time;
 }
 
-@mixin customize-placeholder () {
-    &::-webkit-input-placeholder {
-        /* Chrome/Opera/Safari */
-        @content;
-    }
+@mixin customize-placeholder() {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    @content;
+  }
 
-    &::-moz-placeholder {
-        /* Firefox 19+ */
-        @content;
-    }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    @content;
+  }
 
-    &:-ms-input-placeholder {
-        /* IE 10+ */
-        @content;
-    }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    @content;
+  }
 
-    &:-moz-placeholder {
-        /* Firefox 18- */
-        @content;
-    }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    @content;
+  }
 }
 
-@mixin slide-hover ($color, $pos: false, $speed: .3s) {
-    @include btn-single-border(transparent, $pos, $width: 0) {
-        &::before {
-            @include transition-all($speed);
-        }
-
-        &:hover::before {
-            background-color: $color;
-            width: 100%;
-        }
+@mixin slide-hover($color, $pos: false, $speed: .3s) {
+  @include btn-single-border(transparent, $pos, $width: 0) {
+    &::before {
+      @include transition-all($speed);
     }
-}
 
-@mixin _row () {
-    display: flex;
-    flex-direction: row;
-}
-
-@mixin _col () {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin btn-single-border ($color, $pos: false, $width: 100%) {
-    & {
-        position: relative;
-
-        &::before {
-            content: "";
-            background-color: $color;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: $width;
-            height: 2px;
-            z-index: 1;
-
-            @if $pos {
-                top: auto;
-                bottom: 100%;
-            }
-        }
-
-        @content;
+    &:hover::before {
+      background-color: $color;
+      width: 100%;
     }
+  }
+}
+
+@mixin _row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin _col() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin btn-single-border($color, $pos: false, $width: 100%) {
+  & {
+    position: relative;
+
+    &::before {
+      content: "";
+      background-color: $color;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: $width;
+      height: 2px;
+      z-index: 1;
+
+      @if $pos {
+        top: auto;
+        bottom: 100%;
+      }
+    }
+
+    @content;
+  }
 }
