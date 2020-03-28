@@ -1,5 +1,126 @@
 .team {
   &__body {
     display: flex;
+    justify-content: space-between;
+    margin-right: -20px;
+  }
+
+  .member {
+    background-color: #2e4a5b;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(25% - 20px);
+    margin-right: 20px;
+    box-sizing: border-box;
+    @include transition-all(.2s);
+
+    &:hover {
+      background-color: $main_c;
+    }
+
+    &__avatar {
+      background-color: #ccc;
+      width: 100%;
+      height: 230px;
+      position: relative;
+    }
+    
+    &__overlay {
+      opacity: 0;
+      background: rgba(0, 0, 0, .3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index:  1;
+      @include transition-all(.2s);
+
+      &:before, &:after {
+        content: '';
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      &:after {
+        background: #fff url('#{$svg}/plus_green.svg') no-repeat center;
+        background-size: auto 30%;
+        width: 70px;
+        height: 70px;
+        margin: -35px 0 0 -35px;
+        z-index: 3;
+      }
+
+      &:before {
+        width: 80px;
+        height: 80px;
+        margin: -41px 0 0 -41px;
+        border: 1px solid $main_c;
+        z-index: 2;
+      }
+    }
+
+    &:hover .member__overlay {
+      opacity: 1;
+    }
+
+    &__body {
+      padding: 20px 25px;
+      border-bottom: 1px solid #fff;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    &__position {
+      color: $main_c;
+      font-size: 13px;
+      font-weight: 300;
+      @include transition-all(.2s);
+    }
+
+    &:hover .member__position {
+      color: #2e4a5b;
+    }
+
+    &__footer {
+      display: flex;
+    }
+
+    &__social {
+      display: block;
+      background: no-repeat center;
+      background-size: auto 30%;
+      flex: 0 0 25%;
+      padding-top: 21%;
+      border-right: 1px solid #fff;
+      box-sizing: border-box;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:nth-child(1) {
+        background-image: url("#{$icons}/fb.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("#{$icons}/tw.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("#{$icons}/sk.png");
+      }
+
+      &:nth-child(4) {
+        background-image: url("#{$icons}/v.png");
+      }
+    }
   }
 }
