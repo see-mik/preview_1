@@ -1,45 +1,108 @@
 .contact {
+  position: relative;
 
-    &__header {
-        display: flex;
-        justify-content: flex-start;
+  &__map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    &._hide &-overlay,
+    &._hide &-hint {
+      display: none;
+      visibility: hidden;
     }
+
+    &-overlay {
+      background-color: rgba(0, 0, 0, .3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    &-hint {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(calc(-100% - 40px), -50%);
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      text-shadow: 0 0 4px rgba(0, 0, 0, .7);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 3;
+      @include transition-all(.2s);
+    }
+
+    &:hover .contact__map-hint {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    iframe {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
+.contact .form {
+  z-index: 2;
 
-.form {
-    $me: ".form";
+  @include _col;
+  width: 100%;
 
-    @include _col;
-    width: 100%;
+  &__field {
+    @include _row;
 
-    &__field {
-        @include _row;
+    margin-bottom: 15px;
+    z-index: 1;
 
-        margin-bottom: 15px;
-        z-index: 1;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+  &__text, &__textarea {
+    background-color: $dark_c;
+    flex: 1 0 100%;
+    font-size: 14px;
+    line-height: 19px;
+    color: #dce6e4;
+    padding: 20px 15px;
+    border: 1px solid #dce6e4;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    @include transition-all(.2s);
+
+    &:focus {
+      border-color: $main_c;
+      box-shadow: 0 0 10px rgba($main_c, .7);
     }
 
-    &__text, &__textarea {
-        background-color: transparent;
-        flex: 1 0 100%;
-        font-size: 14px;
-        line-height: 19px;
-        color: #dce6e4;
-        padding: 20px 15px;
-        border: 1px solid #dce6e4;
-        box-sizing: border-box;
+    &:hover {
+      border-color: $main_c;
     }
+  }
 
-    &__textarea {
-        resize: none;
-    }
+  &__textarea {
+    resize: none;
+  }
 
-    &__submit {
-        flex: 1 0 100%;
-    }
+  &__submit {
+    flex: 1 0 100%;
+  }
 }

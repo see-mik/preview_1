@@ -179,6 +179,30 @@ jQuery(document).ready(($) => {
   });
 
 
+  ///* Hide overlay on CTRL press */
+  function hideOverlay() {
+    const overlay = $('.jsHideOverlay');
+    let isOn = false;
+
+    overlay.mouseover(function () {
+      isOn = true;
+    });
+    overlay.mouseleave(function () {
+      isOn = false;
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (isOn && e.keyCode === 17) overlay.addClass('_hide');
+    });
+
+    document.addEventListener('keyup', function (e) {
+      if (e.keyCode === 17) overlay.removeClass('_hide');
+    });
+  }
+
+  hideOverlay();
+
+
   ///* func makes background for the element by grabbing an image from tag img */
   /// by Yevhen Andrikanych
   function ibg() {
